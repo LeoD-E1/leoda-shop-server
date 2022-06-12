@@ -1,7 +1,7 @@
 import { leodaSDB } from "service/database";
 import mongoose, { Schema } from "mongoose";
 
-const productSchecma = new Schema(
+const productSchema = new Schema(
   {
     name: { type: String, required: true, default: "Product" },
     href: { type: String },
@@ -20,4 +20,5 @@ const productSchecma = new Schema(
   }
 );
 
-const ProductModel = leodaSDB.model("product", productSchecma);
+const ProductModel = leodaSDB.model("product", productSchema);
+export default ProductModel;
