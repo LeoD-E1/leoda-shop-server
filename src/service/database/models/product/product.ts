@@ -1,4 +1,4 @@
-import { leodaSDB } from "service/database";
+import { leodaSDB } from "../../";
 import mongoose, { Schema } from "mongoose";
 
 const productSchema = new Schema(

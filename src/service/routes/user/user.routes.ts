@@ -1,4 +1,4 @@
-import userController from "service/controllers/user";
+import userController from "../../controllers/user";
 import { Router } from "restify-router";
 
 const userRouter = new Router();

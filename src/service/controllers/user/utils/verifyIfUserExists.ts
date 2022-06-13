@@ -1,5 +1,4 @@
-import UserModel from "service/database/models/user/user";
-import { Request, Response } from "restify";
+import UserModel from "../../../database/models/user/user";
 
 const verifyIfUserExists = async (email: string) => {
   try {

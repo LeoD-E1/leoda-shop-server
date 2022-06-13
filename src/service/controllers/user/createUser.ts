@@ -1,4 +1,4 @@
-import UserModel from "service/database/models/user/user";
+import UserModel from "../../database/models/user/user";
 import { Request, Response } from "restify";
 import verifyIfUserExists from "./utils/verifyIfUserExists";
 

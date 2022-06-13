@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 let url = process.env.MONGODB_URI || "";
-console.log(url);
 
 export const leodaSDB = mongoose.createConnection(url);
 !leodaSDB

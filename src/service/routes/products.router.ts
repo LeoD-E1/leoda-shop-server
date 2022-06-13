@@ -1,5 +1,8 @@
 import { Router } from "restify-router";
-import { getProducts, getProductById } from "../controllers/product.controller";
+import {
+  getProducts,
+  getProductById,
+} from "../controllers/product/product.controller";
 
 const productRoutes = new Router();
 

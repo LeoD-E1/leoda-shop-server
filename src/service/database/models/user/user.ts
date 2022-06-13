@@ -1,4 +1,4 @@
-import { leodaSDB } from "service/database";
+import { leodaSDB } from "../../";
 import { Schema } from "mongoose";
 
 const userSchema = new Schema(
