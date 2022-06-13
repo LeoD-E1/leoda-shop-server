@@ -10,9 +10,9 @@ const userSchema = new Schema(
     password: { type: String, required: true },
     role: { type: String, default: "owner" },
     contact: {
-      number: { type: Number, required: true },
+      number: { type: Number },
       type: { type: String },
-      email: { type: String, required: true },
+      email: { type: String, required: true, unique: true },
       address: {
         street: { type: String },
         city: { type: String },
@@ -27,5 +27,5 @@ const userSchema = new Schema(
   }
 );
 
-const UserModel = leodaSDB.model("product", userSchema);
+const UserModel = leodaSDB.model("user", userSchema);
 export default UserModel;
