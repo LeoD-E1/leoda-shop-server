@@ -6,9 +6,9 @@ const userSchema = new Schema(
     name: { type: String },
     lastname: { type: String },
     dni: { type: Number },
-    username: { type: String, required: true, unique: true },
+    username: { type: String, unique: true },
     password: { type: String, required: true },
-    role: { type: String, default: "owner" },
+    role: { type: String, required: true, default: "owner" },
     contact: {
       number: { type: Number },
       type: { type: String },
