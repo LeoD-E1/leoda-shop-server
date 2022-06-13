@@ -1,14 +1,14 @@
 import { Router } from "restify-router";
-import profileRoutes from "./profile.router";
-import productRoutes from "./products.router";
+import productRouter from "./products.router";
+import userRouter from "./user/user.routes";
 
 const routerInstance = new Router();
 const listOfRouter = new Router();
 
 routerInstance.add("/api/v1", listOfRouter);
 
-listOfRouter.add("/profile", profileRoutes);
-listOfRouter.add("/products", productRoutes);
+listOfRouter.add("/user", userRouter);
+listOfRouter.add("/product", productRouter);
 
 /* Demas rutas relacionadas con la api*/
 
