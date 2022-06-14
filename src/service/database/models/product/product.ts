@@ -31,5 +31,5 @@ const productSchema = new Schema(
   }
 );
 
-const ProductModel = leodaSDB.model("product", productSchema);
+const ProductModel = leodaSDB.model("Product", productSchema);
 export default ProductModel;

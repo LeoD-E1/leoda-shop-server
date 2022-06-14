@@ -25,7 +25,9 @@ const createUser = async (req: Request, res: Response) => {
     }
 
     const newUser = await UserModel.create({
-      email,
+      contact: {
+        email,
+      },
       password,
       role,
     });

@@ -4,9 +4,9 @@ import { Schema } from "mongoose";
 const userSchema = new Schema(
   {
     name: { type: String },
-    lastname: { type: String },
+    lastName: { type: String },
     dni: { type: Number },
-    username: { type: String, unique: true },
+    userName: { type: String, unique: true },
     password: { type: String, required: true },
     role: { type: String, required: true, default: "owner" },
     contact: {
@@ -27,5 +27,5 @@ const userSchema = new Schema(
   }
 );
 
-const UserModel = leodaSDB.model("user", userSchema);
+const UserModel = leodaSDB.model("User", userSchema);
 export default UserModel;
