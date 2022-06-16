@@ -8,7 +8,12 @@ const userSchema = new Schema(
     dni: { type: Number },
     userName: { type: String, unique: true },
     password: { type: String, required: true },
-    role: { type: String, required: true, default: "owner" },
+    role: {
+      type: String,
+      required: true,
+      enum: ["admin", "owner", "employee"],
+      default: "owner",
+    },
     contact: {
       number: { type: Number },
       type: { type: String },
