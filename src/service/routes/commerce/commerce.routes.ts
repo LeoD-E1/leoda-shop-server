@@ -1,13 +1,7 @@
-// import commerceController from "../../controllers/auth";
+import commerceController from "../../controllers/commerce";
 import { Router } from "restify-router";
-// import { Request, Response, Next } from "restify";
 
 const commerceRouter = new Router();
 
-// const middFirst = (req: Request, res: Response, next: Next) => {
-//   console.log("obj", req.body);
-//   next();
-// };
-
-commerceRouter.post("/create");
+commerceRouter.post("/create", commerceController.createCommerce);
 export default commerceRouter;
