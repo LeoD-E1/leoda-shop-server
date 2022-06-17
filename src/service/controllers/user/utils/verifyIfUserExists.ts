@@ -2,9 +2,13 @@ import UserModel from "../../../database/models/user/user";
 
 const verifyIfUserExists = async (email: string) => {
   try {
-    let user = await UserModel.findOne({ email });
-    if (user) return false;
-    return true;
+    const user = await UserModel.findOne({
+      "contact.email": email,
+    });
+
+    if (!user) return false;
+
+    return user;
   } catch (error) {
     return error;
   }

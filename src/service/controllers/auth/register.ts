@@ -16,7 +16,7 @@ const register = async (req: Request, res: Response) => {
   try {
     const verification = await verifyIfUserExists(email);
 
-    if (!verification) {
+    if (verification) {
       return res
         .json({
           message: "User already exists",
@@ -31,8 +31,15 @@ const register = async (req: Request, res: Response) => {
       password,
       role,
     });
+    console.log(
+      "🚀 ~ file: register.ts ~ line 34 ~ register ~ newUser",
+      newUser
+    );
 
-    if (!newUser) return res.json({ message: "User not created" }).status(400);
+    if (!newUser)
+      return res
+        .json({ message: "User not created, error in server" })
+        .status(400);
 
     return res
       .json({
@@ -40,10 +47,7 @@ const register = async (req: Request, res: Response) => {
       })
       .status(201);
   } catch (error) {
-    return res.json({
-      message: "Something went wrong",
-      error,
-    });
+    console.log(error);
   }
 };
 

@@ -16,7 +16,7 @@ const createUser = async (req: Request, res: Response) => {
   try {
     const verification = await verifyIfUserExists(email);
 
-    if (!verification) {
+    if (verification) {
       return res
         .json({
           message: "User already exists",
