@@ -1,5 +1,5 @@
 import { Router } from "restify-router";
-import productRouter from "./products.router";
+// import productRouter from "./products.router";
 import userRouter from "./user/user.routes";
 import authRouter from "./auth/auth.routes";
 import commerceRouter from "./commerce/commerce.routes";
@@ -11,7 +11,7 @@ routerInstance.add("/api/v1", listOfRouter);
 
 listOfRouter.add("/auth", authRouter);
 listOfRouter.add("/user", userRouter);
-listOfRouter.add("/product", productRouter);
+// listOfRouter.add("/product", productRouter);
 listOfRouter.add("/commerce", commerceRouter);
 
 /* Demas rutas relacionadas con la api*/
