@@ -3,6 +3,6 @@ import branchOfficeController from "../../controllers/branchOffice";
 
 const branchOfficeRouter = new Router();
 
-branchOfficeRouter.post("/create");
+branchOfficeRouter.post("/", branchOfficeController.createBranchOffice);
 
 export default branchOfficeRouter;
