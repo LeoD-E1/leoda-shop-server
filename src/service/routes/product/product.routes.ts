@@ -1,9 +1,9 @@
 import productController from "../../controllers/product";
 import { Router } from "restify-router";
 
-const userRouter = new Router();
+const productRouter = new Router();
 
-userRouter.post("/", productController.createProduct);
-userRouter.get("/", productController.getProducts);
+productRouter.post("/", productController.createProduct);
+productRouter.get("/", productController.getProducts);
 
-export default userRouter;
+export default productRouter;
