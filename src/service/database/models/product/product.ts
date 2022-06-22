@@ -5,26 +5,27 @@ const productSchema = new Schema(
   {
     name: { type: String, required: true, default: "Product" },
     href: { type: String },
-    images: {
-      title: { type: String },
-      src: {
-        type: String,
-        required: true,
-        default: "https://via.placeholder.com/150",
+    images: [
+      {
+        title: { type: String },
+        src: {
+          type: String,
+          default: "https://via.placeholder.com/150",
+        },
+        alt: { type: String, default: "Product" },
       },
-      alt: { type: String, required: true, default: "Product" },
-    },
+    ],
     price: {
-      currency: { type: String, required: true, default: "ARS" },
+      currency: { type: String, default: "ARS" },
       value: { type: Number, required: true, default: 0 },
     },
-    color: { type: Array, required: true },
-    category: { type: Array },
+    color: [{ type: String, default: "black" }],
+    category: [{ type: String }],
     description: { type: String },
-    size: { type: Array },
+    sizes: [{ type: String }],
     brand: { type: String },
     clothingType: { type: String },
-    quantity: { type: Number, required: true, default: 1 },
+    quantity: { type: Number, default: 1 },
   },
   {
     timestamps: true,
