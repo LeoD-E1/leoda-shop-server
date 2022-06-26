@@ -5,13 +5,16 @@ const productSchema = new Schema(
   {
     name: { type: String, required: true, default: "Product" },
     href: { type: String },
+    portrait: {
+      src: {
+        type: String,
+        default: "https://via.placeholder.com/150",
+      },
+      alt: { type: String, default: "Product" },
+    },
     images: [
       {
-        title: { type: String },
-        src: {
-          type: String,
-          default: "https://via.placeholder.com/150",
-        },
+        src: { type: String },
         alt: { type: String, default: "Product" },
       },
     ],

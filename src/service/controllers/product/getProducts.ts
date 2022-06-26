@@ -4,7 +4,7 @@ import ProductModel from "../../database/models/product/product";
 const getProducts = async (req: Request, res: Response) => {
   try {
     const products = await ProductModel.find({});
-    return res.json({ products }).status(201);
+    return res.json(products).status(201);
   } catch (error) {
     return res.json({ error });
   }
