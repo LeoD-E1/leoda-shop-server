@@ -8,6 +8,6 @@ branchOfficeRouter.post("/", branchOfficeController.createBranchOffice);
 // branchOfficeRouter.get("/", branchOfficeController.getAllBranchOffices);
 // branchOfficeRouter.put("/:id", branchOfficeController.updateBranchOffice);
 // branchOfficeRouter.del("/:id", branchOfficeController.deleteBranchOffice);
-branchOfficeRouter.add("/:id", productRouter);
+branchOfficeRouter.add("/:id/products", productRouter);
 
 export default branchOfficeRouter;
