@@ -17,7 +17,7 @@ const productSchema = new Schema(
     ],
     price: {
       currency: { type: String, default: "ARS" },
-      value: { type: Number, required: true, default: 0 },
+      value: { type: Number, required: true },
     },
     color: [{ type: String }],
     category: [{ type: String }],

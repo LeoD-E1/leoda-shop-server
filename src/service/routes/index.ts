@@ -12,6 +12,6 @@ routerInstance.add("/api/v1", listOfRouter);
 listOfRouter.add("/auth", authRouter);
 listOfRouter.add("/user", userRouter);
 // listOfRouter.add("/product",);
-listOfRouter.add("/commerce", commerceRouter);
+listOfRouter.add("/commerces", commerceRouter);
 
 export default routerInstance;
