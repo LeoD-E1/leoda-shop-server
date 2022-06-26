@@ -11,7 +11,7 @@ const server = restify.createServer({
 
 const cors = corsMiddleware({
   preflightMaxAge: 5, //Optional
-  origins: ["http://localhost:3000", "https://leoda-shop.vercel.app/"],
+  origins: ["http://localhost:3000", "https://leoda-shop.vercel.app"],
   allowHeaders: ["API-Token"],
   exposeHeaders: ["API-Token-Expiry"],
 });
